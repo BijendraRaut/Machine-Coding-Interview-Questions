@@ -38,9 +38,3 @@
   const renderSingleEmployee = () => {};
   renderEmployees();
 })();
-
-/*
-* feat - fetch data and rendered the names
-* style - dashboard styled
-
-*/
