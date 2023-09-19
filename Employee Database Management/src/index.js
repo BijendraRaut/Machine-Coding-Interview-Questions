@@ -2,12 +2,22 @@
   const data = await fetch("./src/data.json");
   const json = await data.json();
   let employees = json;
-  let selectedEmployeeid = employees.id;
-  let selectedEmployee = employees;
+  let selectedEmployeeid = employees[0].id;
+  let selectedEmployee = employees[0];
 
   const employeeList = document.querySelector(".employees__names--list");
-  const employeeInfo = document.querySelector(".employee__single--info");
+  const employeeInfo = document.querySelector(".employees__single--info");
 
+  //Add Employee Logic
+  const createEmployee = document.querySelector(".createEmployee");
+  const addEmployeeModal = document.querySelector(".addEmployee");
+  const addEmployeeForm = document.querySelector(".addEmployee_create");
+
+  createEmployee.addEventListener("click", () => {
+    addEmployeeModal.style.display = "flex";
+  });
+
+  // Select Employee Logic
   employeeList.addEventListener("click", (e) => {
     if (e.target.tagName === "SPAN" && selectedEmployeeid !== e.target.id) {
       selectedEmployeeid = e.target.id;
@@ -35,6 +45,20 @@
     });
   };
 
-  const renderSingleEmployee = () => {};
+  const renderSingleEmployee = () => {
+    employeeInfo.innerHTML = `<img src="${selectedEmployee.imageUrl}" />
+    <span class="employees__single--heading">
+    ${selectedEmployee.firstName}
+    ${selectedEmployee.lastName}
+    (${selectedEmployee.age}))<span/>
+    <span>${selectedEmployee.address}<span>
+    <span>${selectedEmployee.email}</span>
+    <span>Mobile- ${selectedEmployee.contactNumber}</span>
+    <span>DOB - ${selectedEmployee.dob}</span>
+    `;
+  };
+
+  if (selectedEmployee) renderSingleEmployee();
+
   renderEmployees();
 })();
