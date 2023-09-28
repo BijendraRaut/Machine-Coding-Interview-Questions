@@ -103,7 +103,17 @@
     <span>DOB - ${selectedEmployee.dob}</span>
     `;
   };
+  const api = "https://randomuser.me/api/";
 
+  /* <---- Fetch data ---- >
+  async function getData() {
+    const data = await fetch(api);
+    const json = await data.json();
+    console.log(json);
+  }
+  getData();
+
+  */
   if (selectedEmployee) renderSingleEmployee();
 
   renderEmployees();
