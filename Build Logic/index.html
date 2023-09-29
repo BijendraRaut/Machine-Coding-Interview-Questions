@@ -8,6 +8,22 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <h1>Task Manager</h1>
+
+    <!-- Form for adding a new task -->
+    <form id="taskForm">
+      <input
+        type="text"
+        id="taskInput"
+        placeholder="Enter a task..."
+        required
+      />
+      <button type="submit">Add Task</button>
+    </form>
+
+    <!-- Display tasks -->
+    <ul id="taskList"></ul>
+
     <script src="app.js"></script>
   </body>
 </html>
