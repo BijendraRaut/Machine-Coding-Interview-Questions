@@ -4,7 +4,7 @@
   "description": "paging app",
   "main": "index.js",
   "scripts": {
-    "test": "start"
+    "start": "parcel index.html"
   },
   "author": "",
   "license": "ISC",
