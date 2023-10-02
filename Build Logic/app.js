@@ -1,4 +1,3 @@
-alert("Working");
 let tasks = [];
 
 // Function to display tasks
