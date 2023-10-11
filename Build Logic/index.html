@@ -9,21 +9,21 @@
   </head>
   <body>
     <h1>Task Manager</h1>
+    <div class="outer-div">
+      <!-- Form for adding a new task -->
+      <form class="inner-div" id="taskForm">
+        <input
+          type="text"
+          id="taskInput"
+          placeholder="Enter a task..."
+          required
+        />
+        <button type="submit">Add Task</button>
+      </form>
 
-    <!-- Form for adding a new task -->
-    <form id="taskForm">
-      <input
-        type="text"
-        id="taskInput"
-        placeholder="Enter a task..."
-        required
-      />
-      <button type="submit">Add Task</button>
-    </form>
-
-    <!-- Display tasks -->
-    <ul id="taskList"></ul>
-
+      <!-- Display tasks -->
+      <ul id="taskList"></ul>
+    </div>
     <script src="app.js"></script>
   </body>
 </html>
