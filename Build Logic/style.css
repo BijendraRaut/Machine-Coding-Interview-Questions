@@ -1,4 +1,23 @@
 body {
-    background-color: black;
-    color: white;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+input[type="text"] {
+    width: 200px;
+}
+
+.outer-div{
+    border: 2px solid #ff0000;
+    width: 20rem;
+    height: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-div{
+    width: 10rem;
+    height: 10rem;
+    margin: 0 auto;
 }
